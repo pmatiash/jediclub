@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"time"
+	"os"
 
 	"github.com/gorilla/mux"
 )
@@ -97,5 +98,5 @@ func main() {
 	router.HandleFunc("/jedis", createJedi).Methods(http.MethodPost)
 	router.HandleFunc("/jedis", getAllJedis).Methods(http.MethodGet)
 
-	log.Fatal(http.ListenAndServe(":8888", router))
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", os.Getenv("PORT")), router))
 }
