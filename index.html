@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+    <style media="screen">
+        .left {
+          float: left;
+        }
+        .right {
+          float: right;
+        }
+
+        .text-right {
+          text-align: right;
+        }
+    </style>
+  </head>
+  <body class="container">
+    <h1 class="text-center">This is crazy Jedi Club!</h1>
+
+    <form action="/jedis" method="POST" autocomplete="off">
+      <div class="col-md-3">
+        <label class="form-label">Jedi name</label>
+        <input type="text" class="form-control {{ if .Errors.name }}is-invalid{{ end }}" name="name" value="{{ .Default.Name }}" required />
+        {{ if .Errors.name }}<div class="invalid-feedback">{{ .Errors.name }}</div>{{ end }}
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">Jedi email</label>
+        <input type="email" class="form-control {{ if .Errors.email }}is-invalid{{ end }}" name="email" value="{{ .Default.Email }}" required />
+        {{ if .Errors.email }}<div class="invalid-feedback">{{ .Errors.email }}</div>{{ end }}
+      </div>
+
+      <div class="col-md-3 mt-2">
+        <div class="col-md-6 left"><button type="submit" class="btn btn-primary">Add</button></div>
+        <div class="col-md-6 right text-right"><button type="reset" class="btn btn-danger">Clear</button></div>
+      </div>
+
+    </form>
+
+    <div>
+      <h2 class="text-center">Jedis</h2>
+      <table class="table table-bordered">
+        <thead>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Registration date</th>
+        </thead>
+
+        <tbody>
+          {{ range $jedi := .Data }}
+          <tr>
+            <td scope="row">{{ $jedi.ID }}</td>
+            <td>{{ $jedi.Name }}</td>
+            <td>{{ $jedi.Email }}</td>
+            <td>{{ $jedi.CreatedAt }}</td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
