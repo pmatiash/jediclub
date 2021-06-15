@@ -16,7 +16,7 @@
 * go to `/jediclub/`
 * execute command `export PORT=%YOU_FAVORITE_PORT_FOR_LOCAL_APP%` 
 * execute command `go build`
-* execute file `./jedi-club` 
+* execute file `./jediclub` 
 * open `localhost:%YOU_FAVORITE_PORT_FOR_LOCAL_APP%` in your browser
 
 ## Dokerized image has been already deployed via Heroku:
