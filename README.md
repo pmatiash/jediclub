@@ -1,11 +1,11 @@
-# Jedi club - awesome Golang application
+# Jedi Club - awesome Golang application
 
 ## What has been done:
-* The application runs as a HTTP-server with your own port
-* Member is described by his name, email, registration date and unique ID
-* Member’s email is unique
+* The application runs as a HTTP-server on your own port
+* Jedi is described by his name, email, registration date and unique ID
+* Jedi’s email is unique
 * All data is stored in the application memory (no data base used)
-* Golang has been used for the back-end /html+bootstrap for the front-end - no js
+* Golang has been used for the back-end /html+bootstrap for the front-end - no js was used for simplicity
 * Back-end side form validation
 * Front-end side form validation
 
