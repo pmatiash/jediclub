@@ -14,10 +14,10 @@
 * download the repository from github `git clone git@github.com:pmatiash/jediclub.git`
 * install golang
 * go to `/jediclub/`
-* execute command `export PORT=%YOU_FAVORITE_PORT_FOR_LOCAL_APP%` 
+* execute command `export PORT=%YOUR_FAVORITE_PORT_FOR_LOCAL_APP%` 
 * execute command `go build`
 * execute file `./jediclub` 
-* open `localhost:%YOU_FAVORITE_PORT_FOR_LOCAL_APP%` in your browser
+* open `localhost:%YOUR_FAVORITE_PORT_FOR_LOCAL_APP%` in your browser
 
 ## Dokerized image has been already deployed via Heroku:
 https://frozen-temple-96054.herokuapp.com/
